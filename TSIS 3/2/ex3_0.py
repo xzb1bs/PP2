@@ -4,8 +4,7 @@ def solve(numheads, numlegs):
         num_rabbits = numheads - num_chickens
         if 2 * num_chickens + 4 * num_rabbits == numlegs:
             return num_chickens, num_rabbits
-    # Если нет решения, возвращаем None
-    return None
+    return 0
 
 
 num_heads = int(input())

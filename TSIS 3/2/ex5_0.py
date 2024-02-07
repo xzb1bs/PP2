@@ -1,7 +1,7 @@
 from itertools import permutations
 
 def print_permutations():
-    string = input("Введите строку: ")
+    string = input()
     all_permutations = [''.join(perm) for perm in permutations(string)]
     
     print("Все перестановки строки:")

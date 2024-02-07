@@ -9,9 +9,15 @@ def is_prime(num):
 def filter_prime(numbers):
     return [num for num in numbers if is_prime(num)]
 
-# Пример использования функции
-numbers_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+num_elements = int(input())
+
+numbers_list = []
+
+for i in range(num_elements):
+    value = int(input())
+    numbers_list.append(value)
+
 result = filter_prime(numbers_list)
 
-print("Исходный список:", numbers_list)
-print("Простые числа из списка:", result)
+print("Ориг:", numbers_list)
+print("Простые числа орига:", result)
