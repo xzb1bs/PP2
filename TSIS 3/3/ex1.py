@@ -5,4 +5,4 @@ film_title = input()
 imdb_rating = float(input())
 
 result = is_highly_rated(film_title, imdb_rating)
-print(f"Фильм '{film_title}' имеет оценку выше 5.5: {result}")
+print(result)
