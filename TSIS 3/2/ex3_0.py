@@ -1,5 +1,5 @@
 def solve(numheads, numlegs):
-    # Условия, учитывающие только целочисленные значения кур и кроликов
+    
     for num_chickens in range(numheads + 1):
         num_rabbits = numheads - num_chickens
         if 2 * num_chickens + 4 * num_rabbits == numlegs:
@@ -7,9 +7,9 @@ def solve(numheads, numlegs):
     # Если нет решения, возвращаем None
     return None
 
-# Пример использования функции
-num_heads = 35
-num_legs = 94
+
+num_heads = int(input())
+num_legs = int(input())
 result = solve(num_heads, num_legs)
 
 if result:

@@ -3,7 +3,7 @@ class StringManipulator:
         self.input_string = ""
 
     def getString(self):
-        self.input_string = input("Введите строку: ")
+        self.input_string = input("Enter string: ")
 
     def printString(self):
         print(self.input_string.upper())

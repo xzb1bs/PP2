@@ -3,6 +3,6 @@ def fahrenheit_to_celsius(fahrenheit):
     return celsius
 
 # Пример использования функции
-fahrenheit_temperature = 98.6
+fahrenheit_temperature = float(input())
 celsius_result = fahrenheit_to_celsius(fahrenheit_temperature)
 print(f"{fahrenheit_temperature} градусов по Фаренгейту равны {celsius_result:.2f} градусам по Цельсию")

@@ -4,7 +4,15 @@ def has_adjacent_3(nums):
             return True
     return False
 
-# Example of using the function
-numbers = [1, 2, 3, 4, 3, 5, 6]
+
+num_elements = int(input())
+
+numbers = []
+
+for i in range(num_elements):
+    value = int(input())
+    numbers.append(value)
+
+
 result = has_adjacent_3(numbers)
 print(result)

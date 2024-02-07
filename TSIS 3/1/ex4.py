@@ -6,7 +6,7 @@ class Point:
         self.y = y
 
     def show(self):
-        print(f"Координаты точки: ({self.x}, {self.y})")
+        print(f"Coordinates: ({self.x}, {self.y})")
 
     def move(self, new_x, new_y):
         self.x = new_x
@@ -16,16 +16,22 @@ class Point:
         distance = math.sqrt((self.x - other_point.x)**2 + (self.y - other_point.y)**2)
         return distance
 
-# Пример использования класса Point
-if __name__ == "__main__":
-    point1 = Point(1, 2)
-    point2 = Point(4, 6)
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+e = int(input())
+f = int(input())
 
-    point1.show()  # Выведет: Координаты точки: (1, 2)
-    point2.show()  # Выведет: Координаты точки: (4, 6)
+if __name__ == "__main__":
+    point1 = Point(a, b)
+    point2 = Point(c, d)
+
+    point1.show()  # Выведет: Координаты точки
+    point2.show()  # Выведет: Координаты точки
 
     distance = point1.dist(point2)
-    print(f"Расстояние между точками: {distance}")  # Выведет: Расстояние между точками: 5.0
+    print(f"Distance between points: {distance}")  # Выведет: Расстояние между точками
 
-    point1.move(3, 5)
-    point1.show()  # Выведет: Координаты точки: (3, 5)
+    point1.move(e, f)
+    point1.show()  # Выведет: Координаты точки

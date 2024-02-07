@@ -13,10 +13,10 @@ class Square(Shape):
     def area(self):
         return self.length ** 2
 
-# Пример использования классов
+a = int(input())
 if __name__ == "__main__":
     shape = Shape()
-    square = Square(4)
+    square = Square(a)
 
-    print("Площадь фигуры (Shape):", shape.area())  # Выведет 0
-    print("Площадь квадрата (Square):", square.area())  # Выведет 16
+    print("Площадь фигуры (Shape):", shape.area())  
+    print("Площадь квадрата (Square):", square.area())  
