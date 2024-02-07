@@ -1,27 +1,18 @@
 def filter_movies_by_category(movies, category):
     return [movie for movie in movies if movie.get('category') == category]
 
-def input_movie_data():
-    movies = []
-    while True:
-        title = input("'exit' to stop): ")
-        if title.lower() == 'exit':
-            break
 
-        category = input()
+movies = []
+while True:
+    title = input("'exit' to stop: ")
+    if title.lower() == 'exit':
+        break
 
-        movie = {'title': title, 'category': category}
-        movies.append(movie)
+    category = input()
 
-    return movies
+    movie = {'title': title, 'category': category}
+    movies.append(movie)
 
-movies_list = input_movie_data()
-
-category_to_filter = input("Enter the category to filter movies: ")
-
-filtered_movies = filter_movies_by_category(movies_list, category_to_filter)
-print(f"Movies in the category '{category_to_filter}':", filtered_movies)
-
-category_to_filter = 'Action'
-filtered_movies = filter_movies_by_category(movies_list, category_to_filter)
-print(f"Movies in the category '{category_to_filter}':", filtered_movies)
+category = input()
+filtered_movies = filter_movies_by_category(movies, category)
+print(f"Movies in the category '{category}':", filtered_movies)

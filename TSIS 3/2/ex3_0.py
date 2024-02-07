@@ -1,15 +1,14 @@
 def solve(numheads, numlegs):
     
-    for num_chickens in range(numheads + 1):
-        num_rabbits = numheads - num_chickens
-        if 2 * num_chickens + 4 * num_rabbits == numlegs:
-            return num_chickens, num_rabbits
+    for chickens in range(numheads + 1):
+        rabbits = numheads - chickens
+        if 2 * chickens + 4 * rabbits == numlegs:
+            return chickens, rabbits
     return 0
 
-
-num_heads = int(input())
-num_legs = int(input())
-result = solve(num_heads, num_legs)
+heads = int(input())
+legs = int(input())
+result = solve(heads, legs)
 
 if result:
     chickens, rabbits = result

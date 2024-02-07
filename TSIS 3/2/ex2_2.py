@@ -1,18 +1,17 @@
-def unique_elements(input_list):
+def unique_elements(list):
     unique_list = []
-    for element in input_list:
+    for element in list:
         if element not in unique_list:
             unique_list.append(element)
     return unique_list
 
 num_elements = int(input())
-
-original_list = []
+list = []
 
 for i in range(num_elements):
     value = int(input())
-    original_list.append(value)
+    list.append(value)
     
-result = unique_elements(original_list)
-print("Original List:", original_list)
+result = unique_elements(list)
+print("Original List:", list)
 print("List with Unique Elements:", result)

@@ -8,24 +8,18 @@ def average_imdb_score_by_category(movies, category):
     average = total_score / len(category_movies)
     return average
 
-def input_movie_data():
-    movies = []
-    while True:
-        title = input("Enter the movie title (or 'exit' to stop): ")
-        if title.lower() == 'exit':
-            break
+movies = []
+while True:
+    title = input("'exit' to stop: ")
+    if title.lower() == 'exit':
+        break
+    category = input()
+    imdb_rating = float(input())
+    movie = {'title': title, 'category': category, 'imdb_rating': imdb_rating}
+    movies.append(movie)
 
-        category = input()
-        imdb_rating = float(input())
 
-        movie = {'title': title, 'category': category, 'imdb_rating': imdb_rating}
-        movies.append(movie)
+category_to_average = input()
 
-    return movies
-
-movies_list = input_movie_data()
-
-category_to_average = input("Enter the category to calculate the average IMDB score: ")
-
-average_score = average_imdb_score_by_category(movies_list, category_to_average)
+average_score = average_imdb_score_by_category(movies, category_to_average)
 print(f"Average IMDB score for '{category_to_average}' movies: {average_score:.2f}")

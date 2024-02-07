@@ -8,9 +8,10 @@ class Point:
     def show(self):
         print(f"Coordinates: ({self.x}, {self.y})")
 
-    def move(self, new_x, new_y):
-        self.x = new_x
-        self.y = new_y
+    """def move(self, new_x, new_y):
+        #self.x = new_x
+        #self.y = new_y
+        return 0"""
 
     def dist(self, other_point):
         distance = math.sqrt((self.x - other_point.x)**2 + (self.y - other_point.y)**2)
@@ -33,5 +34,5 @@ if __name__ == "__main__":
     distance = point1.dist(point2)
     print(f"Distance between points: {distance}")  # Выведет: Расстояние между точками
 
-    point1.move(e, f)
-    point1.show()  # Выведет: Координаты точки
+    #point1.move(e, f)
+
