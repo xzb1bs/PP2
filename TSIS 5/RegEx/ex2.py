@@ -1,8 +1,8 @@
 import re
 
 def test(string):
-    pattern = 'ab{2,3}'
-    if re.fullmatch(pattern, string):
+    check = 'ab{2,3}'
+    if re.fullmatch(check, string):
         return True
     else:
         return False

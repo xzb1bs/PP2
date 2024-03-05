@@ -1,8 +1,8 @@
 import re
 
 def test(s):
-    pattern = re.compile(r'[A-Z][a-z]+')
-    sequences = pattern.findall(s)
+    check = re.compile(r'[A-Z][a-z]+')
+    sequences = check.findall(s)
     return sequences
 
 

@@ -1,8 +1,8 @@
 import re
 
 def test(s):
-    pattern = r'[ ,.]'
-    modified_string = re.sub(pattern, ':', s)
+    check = r'[ ,.]'
+    modified_string = re.sub(check, ':', s)
     return modified_string
 
 s = input()

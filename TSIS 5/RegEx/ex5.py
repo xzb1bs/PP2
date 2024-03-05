@@ -1,8 +1,8 @@
 import re
 
 def test(s):
-    pattern = r'a.*b$'
-    if re.match(pattern, s):
+    check = r'a.*b$'
+    if re.match(check, s):
         return True
     else:
         return False

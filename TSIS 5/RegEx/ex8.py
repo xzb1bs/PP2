@@ -1,8 +1,8 @@
 import re
 
 def test(string):
-    parts = re.findall('[A-Z][^A-Z]*', string)
-    return parts
+    check = re.findall('[A-Z][^A-Z]*', string)
+    return check
 
 s = input()
 string = test(s)
