@@ -1,12 +1,13 @@
-import math
-
 def multiply_list(numbers):
-    return math.prod(numbers)
+    result = 1
+    for num in numbers:
+        result *= num
+    return result
 
 n = int(input())
-my_list = []
+list = []
 for i in range (1, n+1):
     numbers = int(input())
-    my_list.append(numbers)
-result = multiply_list(my_list)
+    list.append(numbers)
+result = multiply_list(list)
 print(result)
