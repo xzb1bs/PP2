@@ -15,6 +15,3 @@ for i in range (1, n+1):
     numbers = int(input())
     list.append(numbers)
 result = multiply_list(list)
-    list.append(numbers)
-result = multiply_list(list)
-print(result)
