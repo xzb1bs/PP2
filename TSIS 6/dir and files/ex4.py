@@ -7,6 +7,6 @@ def count(f_name):
     except FileNotFoundError:
         print("file nit found")
 
-if __name__ == "__main__":
-    file_name = "ex4_text.txt"
-    count(file_name)
+
+file_name = "ex4_text.txt"
+count(file_name)

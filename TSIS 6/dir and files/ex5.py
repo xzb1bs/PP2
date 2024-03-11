@@ -4,9 +4,9 @@ def write_f(f_name, my_list):
             file.write(item) 
 
 
-if __name__ == "__main__":
-    f_name = "ex5_text.txt"
-    my_list = []
-    item = input()
-    my_list.append(item)
-    write_f(f_name, my_list)
+
+f_name = "ex5_text.txt"
+my_list = []
+item = input()
+my_list.append(item)
+write_f(f_name, my_list)

@@ -1,16 +1,16 @@
 import os
 
 def check_path(path):
+    path_clone = path
     if os.path.exists(path):
-        print(f"Путь '{path}' существует.")
         if os.path.isfile(path):
-            print(f"Это файл. Имя файла: {os.path.basename(path)}")
-            print(f"Директория файла: {os.path.dirname(path)}")
-        elif os.path.isdir(path):
-            print("Это директория.")
+            print(f"path '{path}' exists.")
+            print(f"name of this file: {os.path.basename(path)}")
+            print(f"directory of file: {os.path.dirname(path)}")
+        os.remove(path_clone)
     else:
         print(f"Путь '{path}' не существует.")
 
-if __name__ == "__main__":
-    path = input()
-    check_path(path)
+
+path = input()
+check_path(path)

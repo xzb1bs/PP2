@@ -7,5 +7,4 @@ def create_files():
         file_name = f"{letter}.txt"
         f = open(file_name, 'w') 
 
-if __name__ == "__main__":
-    create_files()
+create_files()
