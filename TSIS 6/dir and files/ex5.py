@@ -1,12 +1,12 @@
 def write_f(f_name, my_list):
-    with open(f_name, 'w') as file:
-        for item in my_list:
-            file.write(item) 
+    f = open(f_name, 'w')
+    for i in my_list:
+        f.write(i) 
 
 
 
 f_name = "ex5_text.txt"
 my_list = []
-item = input()
-my_list.append(item)
+str = input()
+my_list.append(str)
 write_f(f_name, my_list)

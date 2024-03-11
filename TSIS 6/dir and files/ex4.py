@@ -1,12 +1,9 @@
 def count(f_name):
-    try:
-        with open(f_name, 'r') as file:
-            lines = file.readlines()
-            num_lines = len(lines)
-        print(num_lines)
-    except FileNotFoundError:
-        print("file nit found")
+    f = open(f_name, 'r') 
+    lines = f.readlines()
+    num_lines = len(lines)
+    print(num_lines)
+    
 
-
-file_name = "ex4_text.txt"
-count(file_name)
+f_name = "ex4_text.txt"
+count(f_name)

@@ -1,8 +1,8 @@
 def copy_file(first_file, second_file):
-    with open(first_file, 'r') as first:
-        with open(second_file, 'w') as second:
-            str = first.read()
-            second.write(str)
+    f = open(first_file, 'r') 
+    o = open(second_file, 'w') 
+    str = f.read()
+    o.write(str)
        
 
 first_file = "ex7(1)_text.txt"
