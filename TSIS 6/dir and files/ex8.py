@@ -8,7 +8,7 @@ def check_path(path):
             print(f"name of this file: {os.path.basename(path)}")
         os.remove(path_clone)
     else:
-        print(f"Путь '{path}' не существует.")
+        print(f"path '{path}' does not exist.")
 
 
 path = input()
