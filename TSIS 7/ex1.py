@@ -7,11 +7,11 @@ pygame.init()
 WIDTH, HEIGHT = 1400 , 1050
 surface = pygame.display.set_mode((WIDTH,HEIGHT))
 Name_app = pygame.display.set_caption('Mickey Mouse Clock')
-icon_app = pygame.image.load('images/mouse.png')
+icon_app = pygame.image.load('mickeyclock.jpeg')
 pygame.display.set_icon(icon_app)
-foto = pygame.image.load('images/mainclock.png')
-right_a = pygame.image.load('images/rightarm.png')
-left_a = pygame.image.load('images/leftarm.png')
+foto = pygame.image.load('mickeyclock.jpeg')
+right_a = pygame.image.load('rightarm.png')
+left_a = pygame.image.load('leftarm.png')
 
 run = True
 FPS = 60

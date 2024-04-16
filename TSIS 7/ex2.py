@@ -1,61 +1,61 @@
-import pygame
-import os
+import pygame,sys 
+import numpy as np
+pygame.init()
+screen = pygame.display.set_mode((500,400))
 
-class MusicPlayer:
-    def __init__(self):
-        pygame.init()
-        pygame.mixer.init()
-        self.playing = False
-        self.current_track_index = 0
-        self.tracks = []
-        self.load_tracks()
-        self.play_current_track()
+play_img = pygame.image.load('play.png')
+play_img = pygame.transform.scale(play_img,(50,50))
 
-    def load_tracks(self):
-        music_folder = "music"  # Folder where your music files are stored
-        for file in os.listdir(music_folder):
-            if file.endswith(".mp3"):
-                self.tracks.append(os.path.join(music_folder, file))
+stop_img = pygame.image.load('stop_button.jpg')
+stop_img = pygame.transform.scale(stop_img,(50,50))
 
-    def play_current_track(self):
-        if self.tracks:
-            pygame.mixer.music.load(self.tracks[self.current_track_index])
-            pygame.mixer.music.play()
-            self.playing = True
+next_img = pygame.image.load('next_button.png')
+next_img = pygame.transform.scale(next_img,(50,50))
 
-    def stop(self):
-        pygame.mixer.music.stop()
-        self.playing = False
+previous_img = pygame.image.load('previous.png')
+previous_img = pygame.transform.scale(previous_img,(50,50))
 
-    def next_track(self):
-        self.stop()
-        self.current_track_index = (self.current_track_index + 1) % len(self.tracks)
-        self.play_current_track()
+sound1 = pygame.mixer.Sound('C:\Users\user\Desktop\PP2\PP2\TSIS 7\music\DJ_Snake_Justin_Bieber_-_Let_Me_Love_You.mp3')
+sound2 = pygame.mixer.Sound('C:\Users\user\Desktop\PP2\PP2\TSIS 7\music\Imagine_Dragons_-_Natural.mp3')
+sound3 = pygame.mixer.Sound('C:\Users\user\Desktop\PP2\PP2\TSIS 7\music\Imagine_Dragons_-_Thunder.mp3')
+sound4 = pygame.mixer.Sound('C:\Users\user\Desktop\PP2\PP2\TSIS 7\music\Eminem_-_The_Real_Slim_Shady.mp3')
 
-    def previous_track(self):
-        self.stop()
-        self.current_track_index = (self.current_track_index - 1) % len(self.tracks)
-        self.play_current_track()
+current_sound = sound1
+current_img = play_img
+while True:
+    screen.fill((255,255,255))
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            exit()
 
-    def handle_events(self):
-        for event in pygame.event.get():
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_SPACE:
-                    if self.playing:
-                        self.stop()
-                    else:
-                        self.play_current_track()
-                elif event.key == pygame.K_n:
-                    self.next_track()
-                elif event.key == pygame.K_p:
-                    self.previous_track()
+  
+    keys = pygame.key.get_pressed()
+    pressed = False
+    if keys[pygame.K_SPACE]:
+        current_sound.play()
+        
+        if current_img == play_img:
+            current_img = stop_img
 
-    def run(self):
-        running = True
-        while running:
-            self.handle_events()
-            pygame.time.Clock().tick(10) 
+
+    if keys[pygame.K_s]:
+        current_sound.stop()
+        if current_img == stop_img:
+            current_img = play_img
+
+  
+    if keys[pygame.K_RIGHT]:
+        current_sound = sound2
+        
+
+    if keys[pygame.K_LEFT]:
+            current_sound = sound3
             
-if __name__ == "__main__":
-    player = MusicPlayer()
-    player.run()
+                    
+    pos = pygame.mouse.get_pos()
+    
+    
+    screen.blit(current_img,(225,300))
+    screen.blit(next_img,(300,300))
+    screen.blit(previous_img,(150,300))
+    pygame.display.flip()
