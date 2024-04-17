@@ -19,6 +19,7 @@ sound1 = pygame.mixer.Sound(r'C:\Users\user\Desktop\PP2\PP2\TSIS 7\music\DJ_Snak
 sound2 = pygame.mixer.Sound(r'C:\Users\user\Desktop\PP2\PP2\TSIS 7\music\Imagine_Dragons_-_Natural.mp3')
 sound3 = pygame.mixer.Sound(r'C:\Users\user\Desktop\PP2\PP2\TSIS 7\music\Imagine_Dragons_-_Thunder.mp3')
 
+
 current_sound = sound1
 current_img = play_img
 while True:
