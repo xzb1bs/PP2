@@ -35,7 +35,7 @@ while run:
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            run = False
+            run = True
 
     pygame.display.update()
     tickrate.tick(FPS)

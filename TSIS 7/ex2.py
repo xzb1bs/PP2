@@ -3,7 +3,7 @@ import numpy as np
 pygame.init()
 screen = pygame.display.set_mode((500,400))
 
-play_img = pygame.image.load('play.png')
+play_img = pygame.image.load('play_image.png')
 play_img = pygame.transform.scale(play_img,(50,50))
 
 stop_img = pygame.image.load('stop_button.jpg')
@@ -12,13 +12,13 @@ stop_img = pygame.transform.scale(stop_img,(50,50))
 next_img = pygame.image.load('next_button.png')
 next_img = pygame.transform.scale(next_img,(50,50))
 
-previous_img = pygame.image.load('previous.png')
+previous_img = pygame.image.load('previous_button.png')
 previous_img = pygame.transform.scale(previous_img,(50,50))
 
-sound1 = pygame.mixer.Sound('C:\Users\user\Desktop\PP2\PP2\TSIS 7\music\DJ_Snake_Justin_Bieber_-_Let_Me_Love_You.mp3')
-sound2 = pygame.mixer.Sound('C:\Users\user\Desktop\PP2\PP2\TSIS 7\music\Imagine_Dragons_-_Natural.mp3')
-sound3 = pygame.mixer.Sound('C:\Users\user\Desktop\PP2\PP2\TSIS 7\music\Imagine_Dragons_-_Thunder.mp3')
-sound4 = pygame.mixer.Sound('C:\Users\user\Desktop\PP2\PP2\TSIS 7\music\Eminem_-_The_Real_Slim_Shady.mp3')
+sound1 = pygame.mixer.Sound(r'C:\Users\user\Desktop\PP2\PP2\TSIS 7\music\DJ_Snake_Justin_Bieber_-_Let_Me_Love_You.mp3')
+sound2 = pygame.mixer.Sound(r'C:\Users\user\Desktop\PP2\PP2\TSIS 7\music\Imagine_Dragons_-_Natural.mp3')
+sound3 = pygame.mixer.Sound(r'C:\Users\user\Desktop\PP2\PP2\TSIS 7\music\Imagine_Dragons_-_Thunder.mp3')
+sound4 = pygame.mixer.Sound(r'C:\Users\user\Desktop\PP2\PP2\TSIS 7\music\Eminem_-_The_Real_Slim_Shady.mp3')
 
 current_sound = sound1
 current_img = play_img
